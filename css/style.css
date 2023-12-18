@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    flex-basis: 370px;
+    margin-top: 50px;
+    margin-right: 28px;
+}
+
+
+
+.card-image img {
+    display: block;
+    max-width: 100%;
+    
+    
+}
+
+
+
+.card-text {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card-text h3 {
+    font-size: 22px;
+    font-weight: 400;
+}

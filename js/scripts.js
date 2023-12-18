@@ -38,5 +38,45 @@ const teams = [{
 console.log(teams);
 
 
-const pippo = document.getElementById('pippo');
+const pippo = document.getElementById('container');
 console.log(pippo)
+
+drawTeam();
+
+function drawTeam(){
+// resetto il teamContainer
+    pippo.innerHTML = '';
+
+    teams.forEach( (teames) => teamcontainermember(teames) );
+
+}
+
+function teamcontainermember(teames){
+// 1    leggo il contentuto del container
+let content = pippo.innerHTML;
+
+// 2    prendo le informazioni del teams nell'array 
+const nome = teames.name;
+const ruolo = teames.role;
+const immagine = teames.photo;
+
+
+// 3    genero l'ouput HTML con il template 
+content += `
+        <div class="team-card">
+        <div class="card-image">
+            <img
+            src="img/${immagine}"
+            alt="immagine"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${nome}</h3>
+            <p>${ruolo}</p>
+        </div>
+        </div>
+        `;
+    
+// 4    lo aggiungo all'HTML 
+container.innerHTML = content;
+}
