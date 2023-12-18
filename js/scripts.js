@@ -1,3 +1,4 @@
+//array di oggetti
 const teams = [{
 
     name: "Wayne Barnett",
@@ -41,11 +42,11 @@ console.log(teams);
 const pippo = document.getElementById('container');
 console.log(pippo)
 
-drawTeam();
+//richiamo funzione
+appendTeam();
 
-function drawTeam(){
-// resetto il teamContainer
-    pippo.innerHTML = '';
+//dichirazione funzione
+function appendTeam(){
 
     teams.forEach( (teames) => teamcontainermember(teames) );
 
